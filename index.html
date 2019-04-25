@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+
+		<div style="width: 300px; margin: auto; padding-top: 150px;">
+			<canvas id="clock" height="300px" width="300px"></canvas>
+			<div id="date"></div>
+		</div>
+		<script type="text/javascript" src="clock.js"></script>
+		<script>
+		/*
+		#################################################################
+		#																#
+		#	创建canvas,设置好id以及宽高								 	#
+		#	引入 clock.js 文件											#
+		#	new Clock(id,color)   id -- canvas的id    color --  设置颜色#
+		#																#
+		#################################################################
+		*/
+			var clock = new Clock("clock","#000");
+			var dom = document.getElementById("date");
+			var date=new Date()
+			dom.innerHTML='当前时间是'+date;
+		</script>
+	</body>
+</html>
